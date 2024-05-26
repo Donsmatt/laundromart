@@ -23,6 +23,7 @@ export default function Register() {
             label="Username:"
             value={user.username}
             user={user}
+            required
             handleChange={(e) => setUser({
               username: e.username
             })}
@@ -32,6 +33,7 @@ export default function Register() {
               label="Create Password:" 
               value={user.password}
               user={user}
+              required
               handleChange={(e) => setUser({
                 password: e.password
               })}

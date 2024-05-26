@@ -5,6 +5,7 @@ export type InputProps = {
   label: string;
   type?: "number" | "password" | "email";
   value: string;
+  required?: boolean;
   user: User;
   handleChange: (user: User) => void
 }

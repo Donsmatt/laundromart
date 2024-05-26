@@ -15,7 +15,7 @@ export default function InputComponent(props: InputProps) {
       <input
         type={type}
         id={props.id}
-        required
+        required={props.required}
         value={props.value}
         className={styles.input}
         onChange={handleChange} />

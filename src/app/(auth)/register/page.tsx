@@ -42,6 +42,7 @@ export default function Register() {
               label="First name:"
               value={user.firstname}
               user={user}
+              required
               handleChange={(e) => setUser({
                 firstname: e.firstname
               })}
@@ -63,6 +64,7 @@ export default function Register() {
               type="email"
               value={user.email}
               user={user}
+              required
               handleChange={(e) => setUser({
                 email: e.email
               })}
@@ -73,16 +75,27 @@ export default function Register() {
               type="number"
               value={user.phoneNumber}
               user={user}
+              required
               handleChange={(e) => setUser({
                 phoneNumber: e.phoneNumber
               })}  
             />
           </div>
           <InputComponent
+            id="address"
+            label="Address:"
+            value={user.address}
+            user={user}
+            handleChange={(e) => setUser({
+              address: e.address
+            })}
+          />
+          <InputComponent
             id="username"
             label="Username:"
             value={user.username}
             user={user}
+            required
             handleChange={(e) => setUser({
               username: e.username
             })}
@@ -93,6 +106,7 @@ export default function Register() {
               label="Create Password:" 
               value={user.password}
               user={user}
+              required
               handleChange={(e) => setUser({
                 password: e.password
               })}
@@ -102,6 +116,7 @@ export default function Register() {
               label="Confirm Password:" 
               value={user.confirmPassword}
               user={user}
+              required
               handleChange={(e) => setUser({
                 confirmPassword: e.confirmPassword
               })}

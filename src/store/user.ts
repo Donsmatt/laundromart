@@ -1,4 +1,5 @@
 import { User } from "@/types/User"
+import { generateRandomId } from "@/utils/uuid"
 import {create} from "zustand"
 
 type AuthStore = {
@@ -6,13 +7,16 @@ type AuthStore = {
   setUser: (user: Partial<User>) => void
 }
 
+const uniqueId = generateRandomId()
+
 export const useAuthStore = create<AuthStore>((set) => ({
   user: {
-    id: "",
+    id: uniqueId,
     firstname: "",
     lastname: "",
     email: "",
     phoneNumber: "",
+    address: "",
     username: "",
     password: "",
     confirmPassword: ""
