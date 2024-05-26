@@ -1,4 +1,4 @@
-import { InputProps } from "./InputProps";
+import { InputProps } from "../../types/Input";
 import styles from "./Input.module.css"
 
 export default function InputComponent(props: InputProps) {

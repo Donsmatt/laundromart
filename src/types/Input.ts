@@ -1,5 +1,4 @@
-import { User } from "@/store/user";
-
+import { User } from "@/types/User";
 
 export type InputProps = {
   id: string;
